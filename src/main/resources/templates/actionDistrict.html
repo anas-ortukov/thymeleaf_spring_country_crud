@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Update District</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container h-100">
+    <div class="d-flex justify-content-center align-items-center mt-5">
+        <div class="col-md-3 mt-5">
+            <div class="card mt-5 ">
+                <div class="card-body">
+                    <h5 class="card-title mt-2 text-center"
+                        th:text="${district!=null?'Edit District':'Add District'}"></h5>
+                    <form class="mt-4" method="post"
+                          th:action="${district != null?'/district/edit/'+district.id :'/district/save'}">
+                        <div class="form-view">
+                            <label for="districtName">District Name</label>
+                            <input name="name" th:value="${district!=null?district.name:''}" type="text"
+                                   class="form-control mt-2" id="districtName" placeholder="Enter district name">
+                        </div>
+<!--                        <div class="form-group mt-4">-->
+<!--                            <label for="countrySelect">Select Country:</label>-->
+<!--                            <select class="form-control mt-2" id="countrySelect">-->
+<!--                                <option th:each="country : ${countries}" th:value="${country.id}"-->
+<!--                                        th:text="${country.name}"></option>-->
+<!--                            </select>-->
+<!--                        </div>-->
+                        <div class="form-group mt-4">
+                            <label for="regionSelect">Select Region:</label>
+                            <select name="regionId" class="form-control mt-2" id="regionSelect">
+                                <option th:each="region : ${regions}" th:value="${region.id}"
+                                        th:text="${region.name}"></option>
+                            </select>
+                        </div>
+                        <div class="text-center mt-4 mb-2">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
