@@ -1,4 +1,4 @@
-package uz.oasis.dbconfig;
+package uz.oasis.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

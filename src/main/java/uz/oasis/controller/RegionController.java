@@ -13,7 +13,7 @@ import java.util.UUID;
 @CrossOrigin
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("region")
+@RequestMapping("/region")
 public class RegionController {
 
     private final RegionService regionService;

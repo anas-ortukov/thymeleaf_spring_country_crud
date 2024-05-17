@@ -3,7 +3,7 @@ package uz.oasis.repo;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
-import uz.oasis.dbconfig.DBConfig;
+import uz.oasis.config.DBConfig;
 import uz.oasis.entity.District;
 import uz.oasis.model.request.DistrictRequestDto;
 import uz.oasis.model.response.DistrictResponseDto;

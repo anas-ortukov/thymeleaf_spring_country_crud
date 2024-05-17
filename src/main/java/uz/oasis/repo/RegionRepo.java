@@ -3,7 +3,7 @@ package uz.oasis.repo;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
-import uz.oasis.dbconfig.DBConfig;
+import uz.oasis.config.DBConfig;
 import uz.oasis.entity.Region;
 import uz.oasis.model.request.RegionRequestDto;
 import uz.oasis.model.response.RegionResponseDto;
@@ -66,7 +66,7 @@ public class RegionRepo {
                         resultSet.getObject(1, UUID.class),
                         resultSet.getString(2),
                         resultSet.getObject(3, UUID.class)
-                        );
+                );
             }
             return null;
         } catch (SQLException e) {

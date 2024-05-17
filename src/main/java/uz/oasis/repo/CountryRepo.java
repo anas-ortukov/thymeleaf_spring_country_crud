@@ -3,10 +3,9 @@ package uz.oasis.repo;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
-import uz.oasis.dbconfig.DBConfig;
+import uz.oasis.config.DBConfig;
 import uz.oasis.entity.Country;
 import uz.oasis.model.CountryDto;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
